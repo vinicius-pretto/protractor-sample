@@ -1,9 +1,7 @@
 describe('wines', () => {
   beforeEach(() => {
     require('../index.js');
-    var webdriver = require('webdriver-manager');
-    webdriver.start();
-  })
+  });
 
   it('should insert a wine', () => {
     browser.get('/');
