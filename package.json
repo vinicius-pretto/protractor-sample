@@ -1,0 +1,26 @@
+{
+  "name": "protractor-sample",
+  "version": "1.0.0",
+  "description": "Protractor Sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor protractor.config.js",
+    "webdriver-update": "webdriver-manager update",
+    "webdriver-start": "webdriver-manager start"
+  },
+  "repository": "https://github.com/vinicius-pretto/protractor-sample.git",
+  "keywords": [
+    "protractor",
+    "angular",
+    "selenium-webdriver"
+  ],
+  "author": "Vinicius Pretto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "protractor": "^4.0.3",
+    "webdriver-manager": "^10.2.2"
+  }
+}

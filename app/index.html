@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Wine Store</title>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body ng-controller="WineCtrl">
+  <div class="container">
+    
+    <h2>Wine Store</h2>
+
+    <form ng-submit="addWine(wine)">
+      <div class="form-inline">
+        <div class="form-group">
+          <input type="text" ng-model="wine.name" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <input type="text" ng-model="wine.variety" class="form-control" placeholder="Variety">
+        </div>
+        <div class="form-group">
+          <input type="text" ng-model="wine.country" class="form-control" placeholder="Country">
+        </div>
+        <div class="form-group">
+          <input type="number" ng-model="wine.price" class="form-control" placeholder="Price">
+        </div>
+        <div class="form-group">
+          <button id="btn-add-wine" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </form>
+
+    <table class="table table-hover">
+      <tr>
+        <th>Name</th>
+        <th>Variety</th>
+        <th>Country</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Casa Silva</td>
+        <td>Cabernet-Sauvignon</td>
+        <td>Chile</td>
+        <td>R$ 50.0</td>
+      </tr>
+      <tr ng-repeat="wine in wines">
+        <td>{{wine.name}}</td>
+        <td>{{wine.variety}}</td>
+        <td>{{wine.country}}</td>
+        <td>R$ {{wine.price}}</td>
+      </tr>
+    </table>
+  </div>
+  
+  <script src="lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="wines/wines.controller.js"></script>
+</body>
+</html>
